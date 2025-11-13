@@ -3,16 +3,41 @@
 > 🧠 **An offline, privacy-focused AI assistant** for the *Bharatiya Nyaya Sanhita (BNS), 2023* and the *Constitution of India* — powered entirely by **local Ollama LLMs**.
 
 ---
+## 👨‍💻 Authors (Published Contributors) – Contact for Collaborations 🤝
 
-## 👥 Team LexBNS – Core Developers
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" width="90" alt="Gokul Ram K"><br>
+      <b>Gokul Ram K</b><br>
+      <i>Lead Developer • ML Engineer • First Author</i><br>
+      <a href="mailto:gokul.ram.kannan210905@gmail.com">gokul.ram.kannan210905@gmail.com</a><br><br>
+      <img src="https://img.shields.io/badge/First%20Author-ML%20Engineer-blueviolet?style=flat-square">
+    </td>
+    <td align="center">
+      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" width="85" alt="Aishwarya Sreenivasan"><br>
+      <b>Aishwarya Sreenivasan</b><br>
+      <i>NLP Engineer • Research Co-Author</i><br>
+      <a href="mailto:aishwaryasreenivasan18@gmail.com">aishwaryasreenivasan18@gmail.com</a><br><br>
+      <img src="https://img.shields.io/badge/Co--Author-NLP%20Researcher-green?style=flat-square">
+    </td>
+    <td align="center">
+      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140051.png" width="90" alt="Shyam Karthinathan"><br>
+      <b>Shyam Karthinathan</b><br>
+      <i>System Designer • Testing Engineer • Co-Author</i><br>
+      <a href="mailto:shyamkarthinathan@gmail.com">shyamkarthinathan@gmail.com</a><br><br>
+      <img src="https://img.shields.io/badge/Co--Author-System%20Design-orange?style=flat-square">
+    </td>
+  </tr>
+</table>
 
-|   | Name | Role |
-|---|------|------|
-| ![Gokul Ram K](path/to/gokul_avatar.png) | **Gokul Ram K** | Lead Developer / ML Engineer |
-| ![Aishwarya Sreenivasan](path/to/aishwarya_avatar.png) | **Aishwarya Sreenivasan** | NLP Engineer / Research |
-| ![Shyam Karthinathan](path/to/shyam_avatar.png) | **Shyam Karthinathan** | System Designer / Testing |
+---
 
-> Guided by **Dr. Sajidha A** – Project Supervisor & Academic Advisor
+> 🧑‍🏫 **Project Guide:**  
+> **Dr. Sajidha A** – Assistant Professor & Research Supervisor  
+> *[Institution Name Here]*  
+> <img src="https://img.shields.io/badge/Faculty%20Guide-Research%20Advisor-lightgrey?style=flat-square">
+
 
 
 ## 📸 Preview
