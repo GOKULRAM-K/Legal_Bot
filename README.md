@@ -4,6 +4,17 @@
 
 ---
 
+## 👥 Team LexBNS – Core Developers
+
+|   | Name | Role |
+|---|------|------|
+| ![Gokul Ram K](path/to/gokul_avatar.png) | **Gokul Ram K** | Lead Developer / ML Engineer |
+| ![Aishwarya Sreenivasan](path/to/aishwarya_avatar.png) | **Aishwarya Sreenivasan** | NLP Engineer / Research |
+| ![Shyam Karthinathan](path/to/shyam_avatar.png) | **Shyam Karthinathan** | System Designer / Testing |
+
+> Guided by **Dr. Sajidha A** – Project Supervisor & Academic Advisor
+
+
 ## 📸 Preview
 
 | ⚖️ **LexBNS – Your Local Legal Assistant** |
