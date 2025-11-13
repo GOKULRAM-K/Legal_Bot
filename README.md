@@ -49,3 +49,31 @@ graph TD
 ```
 
 ---
+
+> The user’s query passes through the **ReAct reasoning loop**,  
+> which interacts with a **FAISS-based retriever** and the **local Ollama model**  
+> to produce structured, context-aware legal answers.
+
+---
+
+## ⚙️ Setup Guide
+
+> 💡 **LexBNS runs fully offline — no API keys, no internet required.**
+
+---
+
+### ✅ Works On:
+- 🪟 **Windows 10 / 11**
+- 🐧 **Linux (Ubuntu / Debian)**
+- 🍎 **macOS**
+- Requires **Python ≥ 3.10**
+
+---
+
+### 🪜 Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/GOKULRAM-K/Legal_Bot.git
+cd Legal_Bot
+```
+
