@@ -76,4 +76,25 @@ graph TD
 git clone https://github.com/GOKULRAM-K/Legal_Bot.git
 cd Legal_Bot
 ```
+### ⚙️ Step 2: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+### 🦙 Step 3: Install & Start Ollama
+
+Then in terminal
+```bash
+ollama serve
+ollama pull llama3.1:8b
+```
+
+> 🟢 Once Ollama is running, your local model (like llama3.1:8b) will be available for LexBNS to process queries.
+
+### 💻 Step 4: Run LexBNS
+
+```bash
+streamlit run app.py
+```
+---
 
