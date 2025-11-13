@@ -35,3 +35,17 @@ It builds upon advanced NLP concepts such as:
 | Difficult to search by section or article | Employs **FAISS embeddings** for legal-term matching |
 
 ---
+
+## 🧱 Architecture
+
+```mermaid
+graph TD
+    A[💬 User Query] --> B[🧠 ReAct Agent]
+    B --> C[📘 Retriever (FAISS Vector DB)]
+    C --> D[📚 BNS / Constitution PDFs]
+    B --> E[🦙 Ollama Model (Llama3.1:8b)]
+    E --> F[⚖️ Reasoned Legal Response]
+    F --> G[💻 Streamlit UI]
+```
+
+---
