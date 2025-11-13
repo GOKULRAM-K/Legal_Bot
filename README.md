@@ -12,21 +12,18 @@
       <b>Gokul Ram K</b><br>
       <i>Software Developer • NLP Engineer</i><br>
       <a href="mailto:gokul.ram.kannan210905@gmail.com">gokul.ram.kannan210905@gmail.com</a><br><br>
-      <img src="https://img.shields.io/badge/First%20Author-ML%20Engineer-blueviolet?style=flat-square">
     </td>
     <td align="center">
       <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" width="85" alt="Aishwarya Sreenivasan"><br>
       <b>Aishwarya Sreenivasan</b><br>
       <i>Software Developer • ML Engineer </i><br>
       <a href="mailto:aishwarya.sreenivasan2023@vitstudent.ac.in">aishwarya.sreenivasan2023@vitstudent.ac.in</a><br><br>
-      <img src="https://img.shields.io/badge/Co--Author-NLP%20Researcher-green?style=flat-square">
     </td>
     <td align="center">
       <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" width="90" alt="Shyam Karthinathan"><br>
       <b>Shyam Karthinathan</b><br>
       <i>System Designer • Testing Engineer </i><br>
       <a href="mailto:shyamkarthinathan.p2023@vitstudent.ac.in">shyamkarthinathan.p2023@vitstudent.ac.in</a><br><br>
-      <img src="https://img.shields.io/badge/Co--Author-System%20Design-orange?style=flat-square">
     </td>
   </tr>
 </table>
