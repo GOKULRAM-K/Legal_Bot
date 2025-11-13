@@ -137,3 +137,43 @@ Here’s the breakdown of the LexBNS directory:
 
 ---
 
+## ✨ Key Features
+
+LexBNS has been designed to provide a balance between **accuracy**, **privacy**, and **usability**, ensuring seamless interaction for both law students and professionals.
+
+| 💡 **Feature** | 🧾 **Description** |
+|:---------------|:------------------|
+| 🧑‍⚖️ **Dual Legal Knowledge Base** | Answers questions from both *Bharatiya Nyaya Sanhita (BNS, 2023)* and *The Constitution of India*. |
+| 🧠 **Offline LLM Inference** | Runs fully on local hardware using **Ollama**, with no internet or API key required. |
+| 🔍 **Smart Legal Retrieval** | Uses **FAISS vector database** for semantic search — matches meaning, not just keywords. |
+| 🧩 **ReAct + RAG Hybrid Logic** | Employs reasoning before retrieval to improve accuracy and contextual understanding. |
+| 💬 **Interactive Chat Interface** | Built with **Streamlit**, featuring chat memory and modern UI design. |
+| 🛡️ **Privacy-First Approach** | No data is sent to any cloud API — ideal for legal and confidential environments. |
+| 🧱 **Modular & Extendable** | Easily add more Indian legal acts (BNSS, BSA, etc.) to the system. |
+| ⚙️ **Cross-Platform Support** | Works seamlessly on Windows, macOS, and Linux. |
+
+---
+
+## 🎓 Technologies Used
+
+LexBNS integrates modern machine learning, natural language processing, and UI tools into one cohesive application:
+
+| 🧩 **Category** | 🛠️ **Tools / Libraries** |
+|-----------------|--------------------------|
+| 💬 **LLM Backend** | Ollama (local Llama3.1:8b), LangChain |
+| 🧠 **Retrieval** | FAISS (Facebook AI Similarity Search), HuggingFace Embeddings |
+| 🧾 **Data Source** | Bharatiya Nyaya Sanhita (2023), Constitution of India PDFs |
+| 🖥️ **Frontend** | Streamlit (Chat-based web interface) |
+| 🧰 **Language / Frameworks** | Python 3.12, dotenv, PyPDF2 |
+| 🧪 **Environment / Deployment** | Docker (optional), .env configuration |
+
+> 🔧 LexBNS runs efficiently even on mid-range systems —  
+> the `llama3.1:8b` model is optimized for strong reasoning with manageable memory usage.
+
+---
+
+> ⚖️ *LexBNS represents a step toward accessible, explainable, and privacy-conscious AI in Indian legal research.*
+
+---
+
+
