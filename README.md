@@ -22,7 +22,7 @@
       <img src="https://img.shields.io/badge/Co--Author-NLP%20Researcher-green?style=flat-square">
     </td>
     <td align="center">
-      <img src="https://cdn.vectorstock.com/i/1000v/43/67/full-face-a-teenage-boy-avatar-vector-35254367.jpg" width="90" alt="Shyam Karthinathan"><br>
+      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140083.png" width="90" alt="Shyam Karthinathan"><br>
       <b>Shyam Karthinathan</b><br>
       <i>System Designer • Testing Engineer • NLP Engineer</i><br>
       <a href="mailto:shyamkarthinathan.p2023@vitstudent.ac.in">shyamkarthinathan.p2023@vitstudent.ac.in</a><br><br>
@@ -35,7 +35,7 @@
 
 > 🧑‍🏫 **Project Guide:**  
 > **Dr. Sajidha A** – Assistant Professor & Research Supervisor  
-> *[Institution Name Here]*  
+> *Vellore Institute of Technology, Chennai Campus*  
 > <img src="https://img.shields.io/badge/Faculty%20Guide-Research%20Advisor-lightgrey?style=flat-square">
 
 
