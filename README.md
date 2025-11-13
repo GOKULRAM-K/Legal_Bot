@@ -38,19 +38,15 @@ It builds upon advanced NLP concepts such as:
 
 ## 🧱 Architecture
 
-## 🧱 Architecture
-
-## 🧱 Architecture
-
 ```mermaid
 graph TD
     A[User Query] --> B[ReAct Agent]
     B --> C[Retriever - FAISS Vector DB]
     C --> D[BNS and Constitution PDFs]
-    B --> E[Ollama Model - Llama3.1]
+    B --> E[Ollama Model - Llama3_1]
     E --> F[Reasoned Legal Response]
     F --> G[Streamlit User Interface]
-
+```
 
 ---
 
