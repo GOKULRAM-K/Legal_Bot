@@ -35,16 +35,6 @@
 > *Vellore Institute of Technology, Chennai Campus*  
 > <img src="https://img.shields.io/badge/Faculty%20Guide-Research%20Advisor-lightgrey?style=flat-square">
 
-
-
-## 📸 Preview
-
-| ⚖️ **LexBNS – Your Local Legal Assistant** |
-|:-------------------------------------------:|
-| *(Add your screenshot here — e.g., assets/lexbns_ui.png)* |
-
----
-
 ## 🚀 Overview
 
 LexBNS is an **AI-powered legal assistant** that helps users query and interpret India’s **Bharatiya Nyaya Sanhita (BNS), 2023** and the **Constitution of India** — fully **offline**.
