@@ -3,29 +3,29 @@
 > 🧠 **An offline, privacy-focused AI assistant** for the *Bharatiya Nyaya Sanhita (BNS), 2023* and the *Constitution of India* — powered entirely by **local Ollama LLMs**.
 
 ---
-## 👨‍💻 Authors (Published Contributors) – Contact for Collaborations 🤝
+## 👨‍💻 Developers (Contributors) – Contact for Collaborations 🤝
 
 <table align="center">
   <tr>
     <td align="center">
       <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" width="90" alt="Gokul Ram K"><br>
       <b>Gokul Ram K</b><br>
-      <i>Lead Developer • ML Engineer • First Author</i><br>
+      <i>Software Developer • ML Engineer • NLP Engineer</i><br>
       <a href="mailto:gokul.ram.kannan210905@gmail.com">gokul.ram.kannan210905@gmail.com</a><br><br>
       <img src="https://img.shields.io/badge/First%20Author-ML%20Engineer-blueviolet?style=flat-square">
     </td>
     <td align="center">
       <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" width="85" alt="Aishwarya Sreenivasan"><br>
       <b>Aishwarya Sreenivasan</b><br>
-      <i>NLP Engineer • Research Co-Author</i><br>
-      <a href="mailto:aishwaryasreenivasan18@gmail.com">aishwaryasreenivasan18@gmail.com</a><br><br>
+      <i>Software Developer • ML Engineer • NLP Engineer</i><br>
+      <a href="mailto:aishwarya.sreenivasan2023@vitstudent.ac.in">aishwarya.sreenivasan2023@vitstudent.ac.in</a><br><br>
       <img src="https://img.shields.io/badge/Co--Author-NLP%20Researcher-green?style=flat-square">
     </td>
     <td align="center">
-      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140051.png" width="90" alt="Shyam Karthinathan"><br>
+      <img src="https://cdn.vectorstock.com/i/1000v/43/67/full-face-a-teenage-boy-avatar-vector-35254367.jpg" width="90" alt="Shyam Karthinathan"><br>
       <b>Shyam Karthinathan</b><br>
-      <i>System Designer • Testing Engineer • Co-Author</i><br>
-      <a href="mailto:shyamkarthinathan@gmail.com">shyamkarthinathan@gmail.com</a><br><br>
+      <i>System Designer • Testing Engineer • NLP Engineer</i><br>
+      <a href="mailto:shyamkarthinathan.p2023@vitstudent.ac.in">shyamkarthinathan.p2023@vitstudent.ac.in</a><br><br>
       <img src="https://img.shields.io/badge/Co--Author-System%20Design-orange?style=flat-square">
     </td>
   </tr>
