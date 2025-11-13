@@ -98,3 +98,42 @@ streamlit run app.py
 ```
 ---
 
+## 🧠 How It Works
+
+LexBNS combines **retrieval**, **reasoning**, and **generation** to produce legally accurate and context-aware answers — even for nuanced queries.
+
+| 🪜 **Step** | ⚙️ **Description** |
+|:-----------:|:------------------|
+| **1️⃣** | The user enters a query, e.g., *“What is Section 103 under BNS?”* |
+| **2️⃣** | The **ReAct agent** interprets the question and decides what data is needed |
+| **3️⃣** | The **FAISS retriever** searches through stored embeddings of BNS and Constitution PDFs |
+| **4️⃣** | The **Ollama model (Llama3.1)** reasons using retrieved context to generate a coherent legal explanation |
+| **5️⃣** | The **Streamlit UI** displays a structured, well-formatted response with context |
+
+> 🧩 This hybrid ReAct + RAG pipeline ensures LexBNS not only retrieves the right information,  
+> but also *understands* and *explains* it in clear legal language.
+
+---
+
+## 📂 Project Structure
+
+Here’s the breakdown of the LexBNS directory:
+
+| 📁 **Folder / File** | 🧾 **Description** |
+|-----------------------|--------------------|
+| `app.py` | Streamlit-based frontend for interactive chat UI |
+| `agent.py` | Core ReAct + RAG logic for legal question answering |
+| `tools/data/` | Source legal documents — `BNS.pdf`, `constitution.pdf` |
+| `db/` | Pre-built FAISS vector indexes for fast semantic retrieval |
+| `tools/pdf_query_tools_.py` | Handles PDF reading, embedding, and vector database interactions |
+| `react_prompt_template.py` | Defines reasoning templates used by the agent |
+| `.env` | (Optional) Environment file for configuration |
+| `requirements.txt` | Python dependencies list |
+| `Dockerfile` | Container setup (optional for deployment) |
+| `README.md` | Project documentation (you’re reading it!) |
+
+> 🗂️ The codebase is modular — you can easily plug in new legal PDFs (like BNSS or BSA)  
+> to expand LexBNS into a more comprehensive legal assistant.
+
+---
+
