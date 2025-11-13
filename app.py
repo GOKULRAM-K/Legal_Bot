@@ -1,150 +1,169 @@
+import streamlit as st
 from langchain_core.messages import HumanMessage, AIMessage
 import os
-from dotenv import dotenv_values
-import streamlit as st
 from agent import agent, check_ollama_connection, get_available_ollama_models
 
-# Load environment variables
-try:
-    ENVs = dotenv_values(".env")  # for dev env
-    GROQ_API_KEY = ENVs.get("GROQ_API_KEY", "")
-except:
-    ENVs = st.secrets  # for streamlit deployment
-    GROQ_API_KEY = ENVs.get("GROQ_API_KEY", "")
-
-# Set environment variables
-if GROQ_API_KEY:
-    os.environ["GROQ_API_KEY"] = GROQ_API_KEY
-if ENVs.get("HUGGINGFACE_API_KEY"):
-    os.environ["HUGGINGFACE_API_KEY"] = ENVs["HUGGINGFACE_API_KEY"]
-
-# Configure Streamlit
+# ───────────────────────────────────────────────
+# ⚖️ Streamlit Page Configuration (must be first)
+# ───────────────────────────────────────────────
 st.set_page_config(
-    page_title="Nyaya-GPT👩‍⚖️",
+    page_title="LexBNS ⚖️",
     page_icon="⚖️",
     layout="centered",
     initial_sidebar_state="expanded",
 )
 
-st.title("Nyaya-GPT⚖️")
+"""
+LexBNS – Bharatiya Nyaya Sanhita Legal Assistant
+-------------------------------------------------
+Local, privacy-focused AI chatbot that helps interpret:
+    • Bharatiya Nyaya Sanhita (BNS), 2023
+    • The Constitution of India
 
-# Sidebar for LLM selection
+Powered entirely by local Ollama models – no cloud APIs.
+"""
+
+# ───────────────────────────────────────────────
+# Streamlit Title
+# ───────────────────────────────────────────────
+st.title("⚖️ LexBNS – Indian Criminal Law Assistant")
+
+# Sidebar Configuration
 with st.sidebar:
     st.header("⚙️ Settings")
-    
+
     # Check OLLAMA connection
     ollama_available = check_ollama_connection()
-    
+
     if ollama_available:
-        st.success("🟢 OLLAMA is running")
+        st.success("🟢 Ollama is running locally")
         available_models = get_available_ollama_models()
-        
-        llm_provider = st.radio(
-            "Choose LLM Provider:",
-            ["Groq (Cloud)", "OLLAMA (Local)"],
-            help="Select between cloud-based Groq or local OLLAMA"
-        )
-        
-        if llm_provider == "OLLAMA (Local)":
-            if available_models:
-                selected_model = st.selectbox(
-                    "Select OLLAMA Model:",
-                    available_models,
-                    help="Choose from your locally installed OLLAMA models"
-                )
-            else:
-                st.warning("No OLLAMA models found. Please install models using: `ollama pull <model_name>`")
-                selected_model = st.text_input(
-                    "Enter model name manually:",
-                    value="llama3.1:8b",
-                    help="Enter the OLLAMA model name (e.g., llama3.1:8b, mistral:7b)"
-                )
+
+        if available_models:
+            selected_model = st.selectbox(
+                "Select Ollama Model:",
+                available_models,
+                help="Choose from locally installed Ollama models"
+            )
+        else:
+            st.warning(
+                "No Ollama models found. "
+                "Install one using: `ollama pull llama3.1:8b`"
+            )
+            selected_model = st.text_input(
+                "Enter model name manually:",
+                value="llama3.1:8b",
+                help="Example: llama3.1:8b, mistral:7b"
+            )
     else:
-        st.error("🔴 OLLAMA not running")
-        st.info("To use local models, start OLLAMA server:\n```\nollama serve\n```")
-        llm_provider = "Groq (Cloud)"
+        st.error("🔴 Ollama server not running")
+        st.info("Start Ollama by opening a terminal and running:\n\n`ollama serve`")
         selected_model = None
-    
+
     # Display current configuration
-    st.subheader("Current Config:")
-    if llm_provider == "OLLAMA (Local)" and ollama_available:
-        st.write(f"**Provider:** OLLAMA (Local)")
+    st.subheader("🧠 Current Configuration")
+    if ollama_available:
         st.write(f"**Model:** {selected_model}")
     else:
-        st.write(f"**Provider:** Groq (Cloud)")
-        st.write(f"**Model:** llama3-8b-8192")
+        st.write("**Model:** None (Ollama not running)")
 
-# Main content
+# Welcome Message
 initial_msg = """
-#### Welcome!!! I am your legal assistant chatbot👩‍⚖️
-#### You can ask me any queries about the laws or constitution of India
-> **NOTE:** Currently I have access to the Bharatiya Nyaya Sanhita (BNS) and the Indian Constitution. Try to ask relevant queries only😇
+### 👩‍⚖️ Welcome to LexBNS
+LexBNS is your offline AI assistant for understanding Indian criminal law.
 
-> **NEW:** You can now choose between cloud-based Groq or local OLLAMA models in the sidebar!
+**Available Sources:**
+- Bharatiya Nyaya Sanhita (BNS), 2023  
+- The Constitution of India
+
+> 💡 *Note:* This chatbot runs entirely on your local machine.
+> Please ensure Ollama is running and a model like `llama3.1:8b` is installed.
 """
 st.markdown(initial_msg)
 
-# Initialize session state
+# Initialize Conversation Memory
 if "store" not in st.session_state:
     st.session_state.store = []
 
 store = st.session_state.store
 
-# Display chat history
+# Display existing chat history
 for message in store:
-    if message.type == "ai":
-        avatar = "👩‍⚖️"
-    else:
-        avatar = "🗨️"
+    avatar = "👩‍⚖️" if message.type == "ai" else "🗨️"
     with st.chat_message(message.type, avatar=avatar):
         st.markdown(message.content)
 
-# Chat input
-if prompt := st.chat_input("What is your query?"):
+# Chat Input Section
+if prompt := st.chat_input("Ask your question about BNS or the Constitution..."):
     # Display user message
     st.chat_message("user", avatar="🗨️").markdown(prompt)
-    
-    # Show thinking message
+
+    # Show “thinking” message
     thinking_placeholder = st.chat_message("assistant", avatar="⚖️")
-    thinking_placeholder.markdown("Thinking...")
-    
-    # Add user message to store
+    thinking_placeholder.markdown("🤔 Thinking...")
+
+    # Store user message
     store.append(HumanMessage(content=prompt))
-    
+
     try:
-        # Determine which LLM to use
-        use_ollama = (llm_provider == "OLLAMA (Local)" and ollama_available)
-        
-        if use_ollama:
-            response_content = agent(prompt, use_ollama=True, ollama_model=selected_model)
+        if not ollama_available:
+            response_text = "⚠️ Ollama is not running. Start it using `ollama serve`."
+        elif not selected_model:
+            response_text = "⚠️ No model selected. Please select or install an Ollama model."
         else:
-            # Check if Groq API key is available
-            if not GROQ_API_KEY:
-                response_content = "Sorry, no API key found for Groq and OLLAMA is not available. Please set GROQ_API_KEY or start OLLAMA server."
-            else:
-                response_content = agent(prompt, use_ollama=False)
-        
-        response = AIMessage(content=response_content)
-        
+            response_text = agent(prompt, use_ollama=True, ollama_model=selected_model)
+
+        response = AIMessage(content=response_text)
+
     except Exception as e:
-        error_msg = f"Sorry, I encountered an error: {str(e)}"
-        if "API" in str(e).upper():
-            error_msg += "\n\nThis might be due to API limits. Try using OLLAMA for local processing."
-        response = AIMessage(content=error_msg)
-    
-    # Add response to store
+        response = AIMessage(content=f"❌ Error: {str(e)}")
+
+    # Save and display AI response
     store.append(response)
-    
-    # Update the thinking message with actual response
     thinking_placeholder.markdown(response.content)
 
-# Footer
+# ───────────────────────────────────────────────
+# Footer (Credits)
+# ───────────────────────────────────────────────
 st.markdown("---")
 st.markdown(
     """
-    <div style='text-align: center; color: gray; font-size: 12px;'>
-        💡 Tip: Use OLLAMA for unlimited local processing or Groq for faster cloud-based responses
+    <div style='text-align:center;color:gray;font-size:12px;margin-top:20px;'>
+        ⚖️ <b>LexBNS</b> | Local AI Assistant for Indian Criminal Law<br>
+        💡 Powered by <b>Ollama</b> | Works 100% Offline
     </div>
-    """, 
+    """,
+    unsafe_allow_html=True,
+)
+
+# ───────────────────────────────────────────────
+# Bottom-left Team Credits
+# ───────────────────────────────────────────────
+st.markdown(
+    """
+    <style>
+        .team-box {
+            position: fixed;
+            bottom: 10px;
+            left: 15px;
+            background-color: rgba(240,240,240,0.9);
+            padding: 8px 14px;
+            border-radius: 10px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.1);
+            font-size: 12px;
+            color: #333;
+        }
+        .team-box b {
+            color: #000;
+        }
+    </style>
+    <div class='team-box'>
+        <b>Team LexBNS:</b><br>
+        Gokul Ram K<br>
+        Aishwarya Sreenivasan<br>
+        Shyam Karthinathan<br>
+        <b>Guide:</b> Dr. Sajidha A
+    </div>
+    """,
     unsafe_allow_html=True
 )
