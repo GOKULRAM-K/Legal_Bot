@@ -20,7 +20,7 @@
       <a href="mailto:aishwarya.sreenivasan2023@vitstudent.ac.in">aishwarya.sreenivasan2023@vitstudent.ac.in</a><br><br>
     </td>
     <td align="center">
-      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" width="90" alt="Shyam Karthinathan"><br>
+      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png" width="90" alt="Shyam Karthinathan"><br>
       <b>Shyam Karthinathan</b><br>
       <i>System Designer • Testing Engineer </i><br>
       <a href="mailto:shyamkarthinathan.p2023@vitstudent.ac.in">shyamkarthinathan.p2023@vitstudent.ac.in</a><br><br>
