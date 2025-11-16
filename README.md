@@ -12,7 +12,7 @@
       <b>Gokul Ram K</b><br>
       <i>Software Developer • NLP Engineer</i><br>
       <a href="mailto:gokul.ram.kannan210905@gmail.com">gokul.ram.kannan210905@gmail.com</a><br><br>
-    </td>
+    </td> 
     <td align="center">
       <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" width="85" alt="Aishwarya Sreenivasan"><br>
       <b>Aishwarya Sreenivasan</b><br>
